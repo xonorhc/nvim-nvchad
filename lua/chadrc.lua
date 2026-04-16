@@ -6,12 +6,14 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "flouromachine",
+  transparency = true,
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  hl_override = {
+    Comment = { fg = "light_grey", italic = true },
+    ["@comment"] = { fg = "light_grey", italic = true },
+    ["@comment.documentation"] = { fg = "light_grey" },
+  },
 }
 
 -- M.nvdash = { load_on_startup = true }
