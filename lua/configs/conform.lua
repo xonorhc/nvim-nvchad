@@ -5,7 +5,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     sh = { "shfmt" },
-    sql = { "pg_format", "sql-formatter", "sqlfmt", stop_after_first = true },
+    sql = { "sqlfluff", "pg_format", "sql-formatter", "sqlfmt", stop_after_first = true },
     markdown = { "prettierd" },
     yaml = { "prettierd" },
     json = { "prettierd" },
@@ -67,6 +67,12 @@ local options = {
   formatters = {
     shfmt = {
       append_args = { "-i", "2" },
+    },
+    sqlfluff = {
+      append_args = { "--templater", "raw", "--dialect", "postgres" },
+    },
+    pg_format = {
+      append_args = { "--no-extra-line", "--nogrouping", "--function-case", "1", "--keep-newline", "--format-type" },
     },
   },
 }
