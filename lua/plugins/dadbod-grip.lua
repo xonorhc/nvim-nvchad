@@ -1,0 +1,29 @@
+return {
+  "joryeugene/dadbod-grip.nvim",
+
+  dependencies = {
+    "tpope/vim-dadbod",
+    "kristijanhusak/vim-dadbod-ui",
+  },
+
+  cmd = {
+    "Grip",
+    "GripStart",
+    "GripConnect",
+    "GripSchema",
+    "GripTables",
+    "GripQuery",
+    "GripHistory",
+  },
+
+  keys = {
+    { "<leader>db", "<cmd>GripConnect<cr>", desc = "DB connect" },
+    { "<leader>dg", "<cmd>Grip<cr>", desc = "DB grid" },
+    { "<leader>dt", "<cmd>GripTables<cr>", desc = "DB tables" },
+    { "<leader>dq", "<cmd>GripQuery<cr>", desc = "DB query pad" },
+    { "<leader>ds", "<cmd>GripSchema<cr>", desc = "DB schema" },
+    { "<leader>dh", "<cmd>GripHistory<cr>", desc = "DB history" },
+  },
+
+  opts = {},
+}
